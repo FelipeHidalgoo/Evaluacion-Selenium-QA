@@ -1,0 +1,95 @@
+{
+  "id": "c9ae48bf-bd62-453e-bb1c-8c927ca95797",
+  "version": "2.0",
+  "name": "QA_Login_Test",
+  "url": "https://www.saucedemo.com",
+  "tests": [{
+    "id": "e9cc8dee-93f4-4d41-bc09-67d86e67b9a5",
+    "name": "CP_Login_Exitoso",
+    "commands": [{
+      "id": "b254cdc4-47fe-4c63-844d-ee010d910a11",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00a159fa-5bff-4f9a-ba44-64436e28f979",
+      "comment": "",
+      "command": "type",
+      "target": "id=user-name",
+      "targets": [],
+      "value": "standard_user"
+    }, {
+      "id": "fc07c871-d221-4fc5-a056-b58afe7901da",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [],
+      "value": "secret_sauce"
+    }, {
+      "id": "5b5d4bdd-75c6-4619-9772-d106ed27a04e",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fdf584e5-975a-44fe-bb18-375b1bac7586",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.inventory_list",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1e052cae-9b1e-4d19-90f7-3b54a722c3ab",
+    "name": "CP_Login_Error",
+    "commands": [{
+      "id": "a204c571-2fc7-4c49-8df4-0d8b8021c302",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b5a92c8-cd55-40cb-86be-7c2751428490",
+      "comment": "",
+      "command": "type",
+      "target": "id=user-name",
+      "targets": [],
+      "value": "standard_user"
+    }, {
+      "id": "c9371284-fd13-43ea-bc13-fbb7548e5d57",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "5b2b3749-f696-4175-b9de-7edce32a1501",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4a400e3-f419-411e-a666-82dbd699d6e7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h3[data-test='error']",
+      "targets": [],
+      "value": "Epic sadface: Username and password do not match"
+    }]
+  }],
+  "suites": [{
+    "id": "1b860582-43a0-4f0d-aa80-e7d14b104595",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.saucedemo.com/"],
+  "plugins": []
+}
